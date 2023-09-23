@@ -7,7 +7,7 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: sans-serif;
+    font-family: "General Sans ";
     color: gold;
     list-style: none;
     overflow-x: hidden;
@@ -123,11 +123,11 @@ display: flex;
 .t{
     background-color: transparent;
 }
-.hovers1:hover{
+.hovers:hover{
     border-bottom: 0.1px solid gainsboro;
     animation-duration: 1s;
 }
-.hovers1:hover{
+.hovers:hover{
     color: gainsboro;
     cursor: pointer;
 }
