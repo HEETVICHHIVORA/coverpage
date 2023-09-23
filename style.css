@@ -138,7 +138,6 @@ display: flex;
             width: 100%;
             display: flex;
             /* justify-content: center; */
-            font-size:;
             align-items: center;
         }
         .heads h4{
@@ -146,7 +145,7 @@ display: flex;
         }
 
         .heads h1{
-            font-size:9vw;
+            font-size:18vw;
             background-color :transparent;
         }
 
