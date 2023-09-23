@@ -140,7 +140,13 @@ display: flex;
             font-size:;
             align-items: center;
         }
+        .heads h4{
+            font-size: 8vw;
+        }
 
-
+        .heads h1{
+            font-size:9vw;
+            background-color :transparent;
+        }
 
 }
