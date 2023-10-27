@@ -95,11 +95,16 @@ display: flex;
  background-color: transparent;
  z-index: auto;
 }
-#fleft{
+.fleft{
  padding-left: 0vw;
  border-bottom: 1.5px solid gold;
  width: fit-content;
+ 
 }
+.fleft :hover{
+    color: beige;
+}
+
 #fmid{
     border-bottom: 1.5px solid gold;
     width: fit-content;
