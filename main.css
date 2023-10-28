@@ -111,6 +111,13 @@ input{
     padding: 0.6vw;
     font-size: 1.5vw;
 }
+#join{
+    padding: 10px 20px;
+    background-color: #0074cc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
 
 .q4{
     width: 25vw;
@@ -128,3 +135,5 @@ input{
     padding: 0.6vw;
     font-size: 1vw;
 } 
+
+

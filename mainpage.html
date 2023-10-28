@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="solutionpage.css">
 </head>
 
 
@@ -34,8 +35,8 @@
     </div>
 
     <div class="q4">
-        <label for="contactno">Contact no.</label><br>
-        <input type="number" id="contactno">
+        <label for="age">Age</label><br>
+        <input type="number" id="age">
     </div>
 
 
@@ -84,7 +85,7 @@
     </div>
 
     <div class="q2">
-        <label for="e1">How much emi do you pay(yearly)?</label><br>
+        <label for="e1">what is the percentage of interest </label><br>
         <input type="text" id="e1">
     </div>
 
@@ -157,11 +158,127 @@
         <input type="text" id="prisky">
     </div>
 
+   
 
+
+</div>
+<button id="join">Display Value</button>
+<div class="solution">
+    <div class="solutionpage">
+        <!-- <button id="join">Display Value</button> -->
+
+        <div class="ans1" id="ans1">Income status:</div>
+        <div class="ans1" id="ans2">Expenditure status:Balanced</div>
+        <div class="ans1" id="ans3">Inestment status:</div>
+        <div class="ans1" id="ans4">Insurance and safety:</div>
+        <div class="ans1" id="ans5">Debt status:</div>
+        <div class="ans1" id="ans6">Debt quality:</div>
+        <div id="error-message" style="color: red;"></div>
+
+    </div>
 </div>
 
 
-</div>
-    
+
+
+
+
+
+
+<script>
+    function getans() {
+        // Get values from various input fields
+        const saving = parseFloat(document.getElementById('saving').value);
+        const otherasset = parseFloat(document.getElementById('otherasset').value);
+        const fd = parseFloat(document.getElementById('fd').value);
+        const prisky = parseFloat(document.getElementById('prisky').value);
+
+
+        // expenditure
+        const personal = parseFloat(document.getElementById('e2').value);
+        const family = parseFloat(document.getElementById('e3').value);
+        const health = parseFloat(document.getElementById('e4').value);
+        const education = parseFloat(document.getElementById('e5').value);
+        const totalexpense = personal+family+health+education;
+
+        //loan 
+
+        const totalloan = parseFloat(document.getElementById('loan').value);
+        const emi = parseFloat(document.getElementById('e1').value);
+        const healthinsurance = parseFloat(document.getElementById('ins1').value);
+        const termins = parseFloat(document.getElementById('ins2').value);
+
+        // personal finance
+        const income1 = parseFloat(document.getElementById('i1').value);
+        const income2 = parseFloat(document.getElementById('i2').value);
+        const income3 = parseFloat(document.getElementById('i3').value);
+        const income4 = parseFloat(document.getElementById('i4').value);
+        const totalincome = income1 + income2 + income3 + income4;
+
+        // personal info 
+        const Age = parseFloat(document.getElementById('age').value);
+        
+
+        // investments 
+        const result = saving + otherasset + fd ;
+        const risk = prisky;
+        
+        // Display the result
+
+        if(Age<=30){
+             if(totalincome<totalloan) {
+                ans5.innerHTML = "You have exceeded the loan limits please pay off your debts";
+                if(saving*0.5 > totalloan){
+                ans5.innerHTML="You have exceeded the loan limits please pay off your debts you have enough savings you can use those to be debt free";  
+                }
+             }
+             if(totalexpense>0.4*totalincome){
+                ans2.innerHTML= "You need to control your expenses";
+             }
+             if(emi>12){
+                ans6.innerHTML= "please payy of your loan its a bad one";
+             }
+             if(emi<12&&emi>8){
+                ans6.innerHTML= " you have a balanced debt status but its advisable to pay of";
+
+             }
+             if(emi<=8){
+                ans6.innerHTML="You have taken a fairly good loan but if its more than your annual income please pay off a certain parth of it";
+             }
+
+            if(prisky>70){
+                ans3.innerHTML= "its good that you are taking risk but please lower down a bit on risky investments "
+            }
+            else if(prisky>30 && prisky<=70){
+                ans3.innerHTML = "you have your portfolio balanced";
+            }
+            else{
+                ans3.innerHTML = "you can explore a bit on risky options too";
+            }
+
+
+        }
+
+        else if(age>30 && age<=60){
+
+        }
+        else if(age>60 && age <=100){
+            
+        }
+        else{
+
+        }
+        
+    }
+
+    const b = document.getElementById('join');
+    b.addEventListener('click', getans);
+</script>
+
+
 </body>
 </html>
+
+
+<!-- const ans1 = document.getElementById('ans1');
+        ans1.innerHTML = 'Total Investments: ' + result; -->

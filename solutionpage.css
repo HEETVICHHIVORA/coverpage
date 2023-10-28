@@ -1,0 +1,16 @@
+.solution{  
+    
+}
+.solutionpage{
+    border: 2px solid white;
+    height: 90vh;
+    width: 95vw;     
+    margin-bottom: 5vh;
+}
+button {
+    padding: 10px 20px;
+    background-color: #0074cc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card1">
+
+        <div class="heading2">
+            INVESTMENTS
+        </div>
+        
+        <div class="q1">
+            <label for="saving">Total liquid savings</label><br>
+            <input type="text" id="saving">
+        </div>
+    
+        <div class="q6">
+            <label for="otherasset">Other assets(stocks,realeastate gold,bonds)</label><br>
+            <input type="text" id="otherasset">
+        </div>
+    
+        <div class="q3">
+            <label for="fd">Total fixed deposits(ppf,post)</label><br>
+            <input type="text" id="fd">
+        </div>
+    
+        <div class="q5">
+            <label for="prisky">Percentage of total investements in risky assets?</label><br>
+            <input type="text" id="prisky">
+        </div>
+    
+       
+    
+    
+    
+    </div>
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script>
+        function getans() {
+            // Get values from various input fields
+            const saving = parseFloat(document.getElementById('saving').value);
+            const otherasset = parseFloat(document.getElementById('otherasset').value);
+            const fd = parseFloat(document.getElementById('fd').value);
+            const prisky = parseFloat(document.getElementById('prisky').value);
+    
+            // Calculate some result based on the input values
+            const result = saving + otherasset + fd + prisky;
+    
+            // Display the result
+            const ans1 = document.getElementById('ans1');
+            ans1.innerHTML = 'Total Investments: ' + result;
+        }
+    
+        const b = document.getElementById('join');
+        b.addEventListener('click', getans);
+    </script>
+    
+</body>
+</html>
+
+
