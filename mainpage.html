@@ -175,14 +175,13 @@
     <div class="solutionpage">
         <!-- <button id="join">Display Value</button> -->
 
-        <div class="ans1" id="ans1">Income status:</div>
-        <div class="ans1" id="ans2">Expenditure status:Balanced</div>
-        <div class="ans1" id="ans3">Inestment status:</div>
-        <div class="ans1" id="ans4">Insurance and safety:</div>
-        <div class="ans1" id="ans5" class="message">Debt status:</div>
-        <div class="ans1" id="ans6">Debt quality:</div>
-        <div class="ans1" id="ans7">ERROR MESSAGE :</div>
-        <div class="ans1" id="ans8">hey</div>
+        <div class="ans1" id="ans2">Expenditure status:NIL</div>
+        <div class="ans1" id="ans3">Investment status:NIL</div>
+        <div class="ans1" id="ans4">Insurance and safety:NIL</div>
+        <div class="ans1" id="ans5" class="message">Debt status:NIL</div>
+        <div class="ans1" id="ans6">Debt quality:NIL</div>
+        <div class="ans1" id="ans7">ERROR MESSAGE :NO ERRORS</div>
+        <div class="ans1" id="ans8"></div>
         
         
         <div id="error-message" style="color: red;"></div>
@@ -242,50 +241,47 @@
         // Display the result
 
         if(Age<=30 && Age>0){
-
-
-
-            if (totalloan>saving*0.5) {
-    ans5.innerHTML = "You have exceeded the loan limits, but you have enough savings to pay off your debts and become debt-free.";
+       if (totalloan>saving*0.5 &&totalloan>=0 &&saving>=0 ) {
+    ans5.innerHTML = "Debt status:Debt status:You have exceeded the loan limits, but you have enough savings to pay off your debts and become debt-free.";
     document.getElementById('ans5').style.color = "red";
     
 } else {
-    ans5.innerHTML = "You are within the loan limits, but consider managing your debt wisely.";
+    if (totalloan<=saving*0.5 &&totalloan>=0 &&saving>=0 ){
+        ans5.innerHTML = "Debt status:Debt status:You are within the loan limits, but consider managing your debt wisely.";
     document.getElementById('ans5').style.color = "green";
-             if(totalexpense>0.4*totalincome){
-                ans2.innerHTML= "You need to control your expenses";
+    }
+    
+             if(totalexpense>0.4*totalincome && totalexpense>=0 &&totalincome>=0){
+                ans2.innerHTML= "Expensiture status:You need to control your expenses";
                 document.getElementById('ans2').style.color = "red";
              }
-             if(emi>12){
-                ans6.innerHTML= "please payy of your loan its a bad one";
+             if(emi>12 &&emi>=0){
+                ans6.innerHTML= "Debt quality:Please payy of your loan its a bad one";
                 document.getElementById('ans6').style.color = "red";
-
              }
-             if(emi<12&&emi>8){
-                ans6.innerHTML= " you have a balanced debt status but its advisable to pay of";
+             if(emi<12&&emi>8 &&emi>=0){
+                ans6.innerHTML= "Debt quality:You have a balanced debt status but its advisable to pay of";
                 document.getElementById('ans6').style.color = "green";
-
              }
-             if(emi<=8){
-                ans6.innerHTML="You have taken a fairly good loan but if its more than your annual income please pay off a certain parth of it";
+             if(emi<=8 &&emi>=0){
+                ans6.innerHTML="Debt quality:You have taken a fairly good loan but if its more than your annual income please pay off a certain parth of it";
                 document.getElementById('ans6').style.color = "red";
-
              }
 
-            if(prisky>70){
-                ans3.innerHTML= "its good that you are taking risk but please lower down a bit on risky investments "
+            if(prisky>70 &&prisky>=0){
+                ans3.innerHTML= "Investment status:its good that you are taking risk but please lower down a bit on risky investments "
                 document.getElementById('ans3').style.color = "red";
-
             }
-            else if(prisky>30 && prisky<=70){
-                ans3.innerHTML = "you have your portfolio balanced";
+            else if(prisky>30 && prisky<=70 && prisky>=0){
+                ans3.innerHTML = "Investment status:you have your portfolio balanced";
                 document.getElementById('ans3').style.color = "red";
-
             }
             else{
-                ans3.innerHTML = "you can explore a bit on risky options too";
+                if(prisky>=0){
+                    ans3.innerHTML = "Investment status:you can explore a bit on risky options too";
                 document.getElementById('ans3').style.color = "red";
-
+                }
+                
             }
 
 
@@ -293,43 +289,43 @@
     }
 
         else if(Age>30 && Age<=60 && Age>0){
-            if(totalincome<totalloan && totalincome>0 && totalexpense>=0) {
-                ans5.innerHTML = "You have exceeded the loan limits please pay off your debts";
+            if(totalincome<totalloan && totalincome>0 && totalloan>=0) {
+                ans5.innerHTML = "Debt status:You have exceeded the loan limits please pay off your debts";
                 document.getElementById('ans5').style.color = "red";
                 if(saving*0.6 > totalloan){
-                ans5.innerHTML="You have exceeded the loan limits please pay off your debts you have enough savings you can use those to be debt free";
+                ans5.innerHTML="Debt status:You have exceeded the loan limits please pay off your debts you have enough savings you can use those to be debt free";
                 document.getElementById('ans5').style.color = "red";  
                 }
              }
              if(totalexpense>0.35*totalincome  && totalincome>0 && totalexpense>=0){
-                ans2.innerHTML= "You need to control your expenses";
+                ans2.innerHTML= "Expenditure status:You need to control your expenses";
                 document.getElementById('ans2').style.color = "red";
              }
              if(emi>12 && emi>=0){
-                ans6.innerHTML= "please payy of your loan its a bad one";
+                ans6.innerHTML= "Debt quality:please payy of your loan its a bad one";
                 document.getElementById('ans6').style.color = "red";
              }
              if(emi<12&&emi>8&& emi>=0){
-                ans6.innerHTML= " you have a balanced debt status but its advisable to pay of";
+                ans6.innerHTML= " Debt quality:you have a balanced debt status but its advisable to pay of";
                 document.getElementById('ans6').style.color = "green";
 
              }
              if(emi<=8 && emi>=0){
-                ans6.innerHTML="You have taken a fairly good loan but if its more than your annual income please pay off a certain parth of it";
+                ans6.innerHTML="Debt quality:You have taken a fairly good loan but if its more than your annual income please pay off a certain parth of it";
                 document.getElementById('ans6').style.color = "green";
              }
 
             if(prisky>55 && prisky>=0){
-                ans3.innerHTML= "its good that you are taking risk but please lower down a bit on risky investments "
+                ans3.innerHTML= "Investment status:its good that you are taking risk but please lower down a bit on risky investments "
                 document.getElementById('ans3').style.color = "red";
             }
             else if(prisky>25 && prisky<=55 && prisky>=0){
-                ans3.innerHTML = "you have your portfolio balanced";
+                ans3.innerHTML = "Investment status:you have your portfolio balanced";
                 document.getElementById('ans3').style.color = "green";
             }
             else{
                 if(prisky>=0 && prisky<=25){
-                    ans3.innerHTML = "you can explore a bit on risky options too";
+                    ans3.innerHTML = "Investment status:you can explore a bit on risky options too";
                 document.getElementById('ans3').style.color = "green";
                 }
                 
@@ -337,34 +333,37 @@
 
         }
         else if(Age>60 && Age <=100 && Age>0){
-            if(totalincome<totalloan) {
-                ans5.innerHTML = "You have exceeded the loan limits please pay off your debts";
+            if(totalincome<totalloan && totalincome>0 && totalloan>=0) {
+                ans5.innerHTML = "Debt status:You have exceeded the loan limits please pay off your debts";
                 if(saving*0.6 > totalloan){
-                ans5.innerHTML="You have exceeded the loan limits please pay off your debts you have enough savings you can use those to be debt free";  
+                ans5.innerHTML="Debt status:You have exceeded the loan limits please pay off your debts you have enough savings you can use those to be debt free";  
                 }
              }
-             if(totalexpense>0.30*totalincome){
-                ans2.innerHTML= "You need to control your expenses";
+             if(totalexpense>0.30*totalincome && totalincome>0 && totalexpense>=0){
+                ans2.innerHTML= "Expenditure status:You need to control your expenses";
              }
-             if(emi>12){
-                ans6.innerHTML= "please payy of your loan its a bad one";
+             if(emi>12 && emi>=0){
+                ans6.innerHTML= "Debt quality:please payy of your loan its a bad one";
              }
-             if(emi<12&&emi>8){
-                ans6.innerHTML= " you have a balanced debt status but its advisable to pay of";
+             if(emi<12&&emi>8 && emi>=0){
+                ans6.innerHTML= " Debt quality:you have a balanced debt status but its advisable to pay of";
 
              }
-             if(emi<=8){
-                ans6.innerHTML="You have taken a fairly good loan but if its more than your annual income please pay off a certain parth of it";
+             if(emi<=8 && emi>=0){
+                ans6.innerHTML="Debt quality:You have taken a fairly good loan but if its more than your annual income please pay off a certain parth of it";
              }
 
-            if(prisky>20){
-                ans3.innerHTML= " please lower down a bit on risky investments "
+            if(prisky>20 && prisky>=0){
+                ans3.innerHTML= "Investment status: please lower down a bit on risky investments "
             }
-            else if(prisky>10 && prisky<=20){
-                ans3.innerHTML = "you have your portfolio balanced";
+            else if(prisky>10 && prisky<=20 && prisky>=0){
+                ans3.innerHTML = "Investment status:you have your portfolio balanced";
             }
             else{
-                ans3.innerHTML = "you can explore a bit on risky options too";
+                if(prisky>=0){
+                    ans3.innerHTML = "Investment status:you can explore a bit on risky options too";
+                }
+                
             }
 
         }
