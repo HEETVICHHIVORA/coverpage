@@ -6,11 +6,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="solutionpage.css">
+    <link rel="stylesheet" href="locomotive.css">
 </head>
 
 
 <body>
-    <div class="main">
+    <div id="main">
 
 
 <div class="card1">
@@ -241,6 +242,27 @@
         // Display the result
 
         if(Age<=30 && Age>0){
+       if(healthinsurance<500000 && termins <5000000 && healthinsurance>=0 && termins>=0){
+        ans4.innerHTML = "Insurance and safety:Please increase or take more health insurance(Min:500k INR) & Term insurance(Min:5Million INR)"
+        document.getElementById('ans4').style.color = "red";
+       }
+       else if(healthinsurance=>500000 && termins<5000000 && healthinsurance>=0  && termins>=0){
+        ans4.innerHTML = "Insurance and safety:Please increase Term insurance(min:5 m INR)"
+        document.getElementById('ans4').style.color = "red";
+       }
+       else if(healthinsurance<500000 && termins>=5000000 && healthinsurance>=0 && termins>=0){
+        ans4.innerHTML = "Insurance and safety:Please increase or take more health insurance(min:500k INR)"
+        document.getElementById('ans4').style.color = "red";
+       }
+       else if(healthinsurance>500000 && termins>=5000000){
+       ans4.innerHTML = "Insurance and safety:Stable"
+       document.getElementById('ans4').style.color = "green";
+       }
+       else{
+        ans4.innerHTML="Please enter a proper numeric value"
+        document.getElementById('ans4').style.color = "red";
+       }
+
        if (totalloan>saving*0.5 &&totalloan>=0 &&saving>=0 ) {
     ans5.innerHTML = "Debt status:Debt status:You have exceeded the loan limits, but you have enough savings to pay off your debts and become debt-free.";
     document.getElementById('ans5').style.color = "red";
@@ -255,6 +277,10 @@
                 ans2.innerHTML= "Expensiture status:You need to control your expenses";
                 document.getElementById('ans2').style.color = "red";
              }
+             else{
+                ans2.innerHTML= "Expenditure status:Stable";
+                document.getElementById('ans2').style.color = "green";
+             }
              if(emi>12 &&emi>=0){
                 ans6.innerHTML= "Debt quality:Please payy of your loan its a bad one";
                 document.getElementById('ans6').style.color = "red";
@@ -265,7 +291,7 @@
              }
              if(emi<=8 &&emi>=0){
                 ans6.innerHTML="Debt quality:You have taken a fairly good loan but if its more than your annual income please pay off a certain parth of it";
-                document.getElementById('ans6').style.color = "red";
+                document.getElementById('ans6').style.color = "green";
              }
 
             if(prisky>70 &&prisky>=0){
@@ -274,7 +300,7 @@
             }
             else if(prisky>30 && prisky<=70 && prisky>=0){
                 ans3.innerHTML = "Investment status:you have your portfolio balanced";
-                document.getElementById('ans3').style.color = "red";
+                document.getElementById('ans3').style.color = "green";
             }
             else{
                 if(prisky>=0){
@@ -394,7 +420,8 @@
     const b = document.getElementById('join');
     b.addEventListener('click', getans);
 </script>
-
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+<script src="index.js"></script>
 
 </body>
 </html>

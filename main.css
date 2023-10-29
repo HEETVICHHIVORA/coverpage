@@ -23,7 +23,7 @@ input{
     margin-top: 2vh;
 }
 
-.main{
+#main{
     width: 100vw;
     background-color: black;
     background-image: url(bgimg5.jpg);

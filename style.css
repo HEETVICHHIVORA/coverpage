@@ -13,6 +13,12 @@
     overflow-x: hidden;
     overflow-y: hidden;
 }
+#fmid :hover{
+    color: white;
+}
+.ri-arrow-right-up-line:hover{
+    color: white;
+}
 #main{
     background-color: black;
     top: 0;
