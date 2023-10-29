@@ -293,7 +293,7 @@
     }
 
         else if(Age>30 && Age<=60 && Age>0){
-            if(totalincome<totalloan) {
+            if(totalincome<totalloan && totalincome>0 && totalexpense>=0) {
                 ans5.innerHTML = "You have exceeded the loan limits please pay off your debts";
                 document.getElementById('ans5').style.color = "red";
                 if(saving*0.6 > totalloan){
@@ -301,35 +301,38 @@
                 document.getElementById('ans5').style.color = "red";  
                 }
              }
-             if(totalexpense>0.35*totalincome){
+             if(totalexpense>0.35*totalincome  && totalincome>0 && totalexpense>=0){
                 ans2.innerHTML= "You need to control your expenses";
                 document.getElementById('ans2').style.color = "red";
              }
-             if(emi>12){
+             if(emi>12 && emi>=0){
                 ans6.innerHTML= "please payy of your loan its a bad one";
                 document.getElementById('ans6').style.color = "red";
              }
-             if(emi<12&&emi>8){
+             if(emi<12&&emi>8&& emi>=0){
                 ans6.innerHTML= " you have a balanced debt status but its advisable to pay of";
                 document.getElementById('ans6').style.color = "green";
 
              }
-             if(emi<=8){
+             if(emi<=8 && emi>=0){
                 ans6.innerHTML="You have taken a fairly good loan but if its more than your annual income please pay off a certain parth of it";
                 document.getElementById('ans6').style.color = "green";
              }
 
-            if(prisky>55){
+            if(prisky>55 && prisky>=0){
                 ans3.innerHTML= "its good that you are taking risk but please lower down a bit on risky investments "
                 document.getElementById('ans3').style.color = "red";
             }
-            else if(prisky>25 && prisky<=55){
+            else if(prisky>25 && prisky<=55 && prisky>=0){
                 ans3.innerHTML = "you have your portfolio balanced";
                 document.getElementById('ans3').style.color = "green";
             }
             else{
-                ans3.innerHTML = "you can explore a bit on risky options too";
+                if(prisky>=0 && prisky<=25){
+                    ans3.innerHTML = "you can explore a bit on risky options too";
                 document.getElementById('ans3').style.color = "green";
+                }
+                
             }
 
         }
