@@ -259,10 +259,10 @@
 
         }
 
-        else if(age>30 && age<=60){
+        else if(Age>30 && Age<=60){
             if(totalincome<totalloan) {
                 ans5.innerHTML = "You have exceeded the loan limits please pay off your debts";
-                if(saving*0.5 > totalloan){
+                if(saving*0.6 > totalloan){
                 ans5.innerHTML="You have exceeded the loan limits please pay off your debts you have enough savings you can use those to be debt free";  
                 }
              }
@@ -291,14 +291,14 @@
             }
 
         }
-        else if(age>60 && age <=100){
+        else if(Age>60 && Age <=100){
             if(totalincome<totalloan) {
                 ans5.innerHTML = "You have exceeded the loan limits please pay off your debts";
-                if(saving*0.5 > totalloan){
+                if(saving*0.6 > totalloan){
                 ans5.innerHTML="You have exceeded the loan limits please pay off your debts you have enough savings you can use those to be debt free";  
                 }
              }
-             if(totalexpense>0.4*totalincome){
+             if(totalexpense>0.30*totalincome){
                 ans2.innerHTML= "You need to control your expenses";
              }
              if(emi>12){
