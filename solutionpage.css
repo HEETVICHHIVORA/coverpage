@@ -1,9 +1,10 @@
 
 .solutionpage{
     border: 2px solid white;
-    height: 90vh;
-    width: 95vw;     
+    height: 80vh;
+    width: 85vw;     
     margin-bottom: 5vh;
+    background-color: black;
 }
 button {
     padding: 10px 20px;
