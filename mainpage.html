@@ -59,8 +59,8 @@
     </div>
     
     <div class="q1">
-        <label for="i1">Average in-hand salary(Per annum)?</label><br>
-        <input type="text" id="i1">
+        <label for="i1">Average in-hand salary(Per annum)</label><br>
+        <input type="number" id="i1">
     </div>
 
     <div class="q2">
@@ -181,11 +181,18 @@
         <div class="ans1" id="ans4">Insurance and safety:</div>
         <div class="ans1" id="ans5" class="message">Debt status:</div>
         <div class="ans1" id="ans6">Debt quality:</div>
+        <div class="ans1" id="ans7">ERROR MESSAGE :</div>
+        <div class="ans1" id="ans8">hey</div>
+        
+        
         <div id="error-message" style="color: red;"></div>
-
+       
     </div>
+   
 </div>
 
+
+    <a href="op.html">More Plans</a>
 
 
 
@@ -195,7 +202,8 @@
 
 <script>
     function getans() {
-        // Get values from various input fields
+        
+        
         const saving = parseFloat(document.getElementById('saving').value);
         const otherasset = parseFloat(document.getElementById('otherasset').value);
         const fd = parseFloat(document.getElementById('fd').value);
@@ -233,7 +241,10 @@
         
         // Display the result
 
-        if(Age<=30){
+        if(Age<=30 && Age>0){
+
+
+
             if (totalloan>saving*0.5) {
     ans5.innerHTML = "You have exceeded the loan limits, but you have enough savings to pay off your debts and become debt-free.";
     document.getElementById('ans5').style.color = "red";
@@ -281,7 +292,7 @@
         }
     }
 
-        else if(Age>30 && Age<=60){
+        else if(Age>30 && Age<=60 && Age>0){
             if(totalincome<totalloan) {
                 ans5.innerHTML = "You have exceeded the loan limits please pay off your debts";
                 document.getElementById('ans5').style.color = "red";
@@ -322,7 +333,7 @@
             }
 
         }
-        else if(Age>60 && Age <=100){
+        else if(Age>60 && Age <=100 && Age>0){
             if(totalincome<totalloan) {
                 ans5.innerHTML = "You have exceeded the loan limits please pay off your debts";
                 if(saving*0.6 > totalloan){
@@ -355,10 +366,28 @@
 
         }
         else{
-            
+            ans7.innerHTML = "ERROR MESSAGE:: Please enter a correct age ";
+            document.getElementById('ans7').style.color = "red";
+        }
+        if(isNaN(totalincome)){
+            ans1.innerHTML="Please enter a correct income"
+        }
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+        // Get values from various input fields
+        const emailInput = document.getElementById('email').value;
+
+        // Validate the email
+        if (emailRegex.test(emailInput)) {
+            // It's a valid email address
+        } else {
+            // It's not a valid email address
+            document.getElementById('ans8').innerHTML = "Please enter a valid email";
+            return; // Stop processing if the email is not valid
         }
         
     }
+    
 
     const b = document.getElementById('join');
     b.addEventListener('click', getans);
@@ -369,5 +398,5 @@
 </html>
 
 
-// <!-- const ans1 = document.getElementById('ans1');
+ <!-- const ans1 = document.getElementById('ans1');
 //         ans1.innerHTML = 'Total Investments: ' + result; -->
