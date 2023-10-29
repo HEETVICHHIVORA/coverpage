@@ -26,7 +26,7 @@ input{
 .main{
     width: 100vw;
     background-color: black;
-    background-image: url(bgimg4.jpg);
+    background-image: url(bgimg5.jpg);
     background-size: contain;
     background-repeat: round ;
     display: flex;
@@ -35,6 +35,8 @@ input{
     flex-direction: column;
     height: 100%;
 }
+
+
 
 .card1{
     z-index: 1000;
@@ -109,15 +111,42 @@ input{
     font-size: 1.5vw;
     
 }
+input[name="Gender"] {
+	accent-color: yellow;
+}
+.check{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-size: 2.5vh;
+    overflow-y: hidden;
+}
+
+.check span{
+    overflow-y: hidden;
+    padding: 0.1vw;
+}
+
+.check input{
+    width: 1vw;
+    display:inline;
+    height: 1.7vh;
+}
 .q3{
     width: 25vw;
-    height: 11vh;
+    height: 18vh;
     overflow-y: hidden;
     margin: 2vh;
     padding: 0.6vw;
     font-size: 1.5vw;
     
+    display: flex;
+    flex-direction: column;
 }
+.q3 p{
+    overflow-y: hidden;
+}
+
 #join{
     padding: 10px 20px;
     background-color: #0074cc;
