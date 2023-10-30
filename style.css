@@ -13,6 +13,9 @@
     overflow-x: hidden;
     overflow-y: hidden;
 }
+.hovers a:hover{
+    color: gainsboro;
+}
 #fmid :hover{
     color: white;
 }
