@@ -19,7 +19,7 @@ button {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    width: 10vw;
+    width: 14vw;
     height: 6vh;
     border-radius: 15px;
     /* box-shadow: 0px 0px 20px gold; */
@@ -47,6 +47,61 @@ a:hover{
     background-color: black;
     color: gold;
     border: 2px solid gold;
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .solutionpage{
+        border: 2px solid white;
+        height: 60vh;
+        width: 85vw;     
+        margin-bottom: 5vh;
+        background-color: black;
+        display: flex;
+        font-size: 3.4vw;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 0.5vh;
+        gap: 3vh;
+    }
+    
+    button {
+        font-size: 1vw;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        width: 20vw;
+        height: 6vh;
+        border-radius: 15px;
+        /* box-shadow: 0px 0px 20px gold; */
+    }
+    
+    a{
+        background-color: gold;
+        font-weight: 900;
+        color: black;
+        width: 20vw;
+        height: 6vh;
+        text-decoration: none;
+        border-radius: 15px;
+        transition: 0.2s;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5vh;
+    }
+    
+    a:hover{
+        width: 10vw;
+        height: 6vh;
+        box-shadow: 0px 0px 20px gold;
+        background-color: black;
+        color: gold;
+        border: 2px solid gold;
+    
+    }
 
 }
 
