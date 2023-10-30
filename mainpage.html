@@ -240,13 +240,16 @@
         const risk = prisky;
         
         // Display the result
-
-        if(Age<=30 && Age>0){
+if(Age<=30 && Age>0){
        if(healthinsurance<500000 && termins <5000000 && healthinsurance>=0 && termins>=0){
         ans4.innerHTML = "Insurance and safety:Please increase or take more health insurance(Min:500k INR) & Term insurance(Min:5Million INR)"
         document.getElementById('ans4').style.color = "red";
        }
-       else if(healthinsurance=>500000 && termins<5000000 && healthinsurance>=0  && termins>=0){
+       else if(healthinsurance>500000 && termins>=5000000 && healthinsurance>=0 && termins>=0){
+       ans4.innerHTML = "Insurance and safety:Stable"
+       document.getElementById('ans4').style.color = "green";
+       }
+       else if(healthinsurance>=500000 && termins<5000000 && healthinsurance>=0  && termins>=0){
         ans4.innerHTML = "Insurance and safety:Please increase Term insurance(min:5 m INR)"
         document.getElementById('ans4').style.color = "red";
        }
@@ -254,11 +257,9 @@
         ans4.innerHTML = "Insurance and safety:Please increase or take more health insurance(min:500k INR)"
         document.getElementById('ans4').style.color = "red";
        }
-       else if(healthinsurance>500000 && termins>=5000000){
-       ans4.innerHTML = "Insurance and safety:Stable"
-       document.getElementById('ans4').style.color = "green";
-       }
-       else{
+       
+       else {
+
         ans4.innerHTML="Please enter a proper numeric value"
         document.getElementById('ans4').style.color = "red";
        }
@@ -267,7 +268,7 @@
     ans5.innerHTML = "Debt status:Debt status:You have exceeded the loan limits, but you have enough savings to pay off your debts and become debt-free.";
     document.getElementById('ans5').style.color = "red";
     
-} else {
+    } else {
     if (totalloan<=saving*0.5 &&totalloan>=0 &&saving>=0 ){
         ans5.innerHTML = "Debt status:Debt status:You are within the loan limits, but consider managing your debt wisely.";
     document.getElementById('ans5').style.color = "green";
@@ -315,6 +316,29 @@
     }
 
         else if(Age>30 && Age<=60 && Age>0){
+            if(healthinsurance<1000000 && termins <10000000 && healthinsurance>=0 && termins>=0){
+        ans4.innerHTML = "Insurance and safety:Please increase or take more health insurance(Min:500k INR) & Term insurance(Min:5Million INR)"
+        document.getElementById('ans4').style.color = "red";
+       }
+       else if(healthinsurance>1000000 && termins>=10000000 && healthinsurance>=0 && termins>=0){
+       ans4.innerHTML = "Insurance and safety:Stable"
+       document.getElementById('ans4').style.color = "green";
+       }
+       else if(healthinsurance>=1000000 && termins<10000000 && healthinsurance>=0  && termins>=0){
+        ans4.innerHTML = "Insurance and safety:Please increase Term insurance(min:5 m INR)"
+        document.getElementById('ans4').style.color = "red";
+       }
+       else if(healthinsurance<1000000 && termins>=10000000 && healthinsurance>=0 && termins>=0){
+        ans4.innerHTML = "Insurance and safety:Please increase or take more health insurance(min:500k INR)"
+        document.getElementById('ans4').style.color = "red";
+       }
+       
+       else {
+
+        ans4.innerHTML="Please enter a proper numeric value"
+        document.getElementById('ans4').style.color = "red";
+       }
+
             if(totalincome<totalloan && totalincome>0 && totalloan>=0) {
                 ans5.innerHTML = "Debt status:You have exceeded the loan limits please pay off your debts";
                 document.getElementById('ans5').style.color = "red";
@@ -359,6 +383,28 @@
 
         }
         else if(Age>60 && Age <=100 && Age>0){
+            if(healthinsurance<1500000 && termins <10000000 && healthinsurance>=0 && termins>=0){
+        ans4.innerHTML = "Insurance and safety:Please increase or take more health insurance(Min:500k INR) & Term insurance(Min:5Million INR)"
+        document.getElementById('ans4').style.color = "red";
+       }
+       else if(healthinsurance>1500000 && termins>=10000000 && healthinsurance>=0 && termins>=0){
+       ans4.innerHTML = "Insurance and safety:Stable"
+       document.getElementById('ans4').style.color = "green";
+       }
+       else if(healthinsurance>=1500000 && termins<10000000 && healthinsurance>=0  && termins>=0){
+        ans4.innerHTML = "Insurance and safety:Please increase Term insurance(min:5 m INR)"
+        document.getElementById('ans4').style.color = "red";
+       }
+       else if(healthinsurance<1500000 && termins>=10000000 && healthinsurance>=0 && termins>=0){
+        ans4.innerHTML = "Insurance and safety:Please increase or take more health insurance(min:500k INR)"
+        document.getElementById('ans4').style.color = "red";
+       }
+       
+       else {
+
+        ans4.innerHTML="Please enter a proper numeric value"
+        document.getElementById('ans4').style.color = "red";
+       }
             if(totalincome<totalloan && totalincome>0 && totalloan>=0) {
                 ans5.innerHTML = "Debt status:You have exceeded the loan limits please pay off your debts";
                 if(saving*0.6 > totalloan){
@@ -426,6 +472,3 @@
 </body>
 </html>
 
-
- <!-- const ans1 = document.getElementById('ans1');
-//         ans1.innerHTML = 'Total Investments: ' + result; -->
