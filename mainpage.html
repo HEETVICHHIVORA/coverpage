@@ -238,23 +238,7 @@
         // investments 
         const result = saving + otherasset + fd ;
         const risk = prisky;
-         if(isNaN(totalincome)){
-            ans1.innerHTML="Please enter a correct income"
-        }
-        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-
-        // Get values from various input fields
-        const emailInput = document.getElementById('email').value;
-
-        // Validate the email
-        if (emailRegex.test(emailInput)) {
-            // It's a valid email address
-             document.getElementById('ans8').innerHTML = "Mail - id valid";
-        } else {
-            // It's not a valid email address
-            document.getElementById('ans8').innerHTML = "Please enter a valid email";
-            return; // Stop processing if the email is not valid
-        }
+       
         // Display the result
 if(Age<=30 && Age>0){
        if(healthinsurance<500000 && termins <5000000 && healthinsurance>=0 && termins>=0){
