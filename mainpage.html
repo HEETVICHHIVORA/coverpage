@@ -462,6 +462,7 @@ if(Age<=30 && Age>0){
         // Validate the email
         if (emailRegex.test(emailInput)) {
             // It's a valid email address
+             document.getElementById('ans8').innerHTML = "Mail - id valid";
         } else {
             // It's not a valid email address
             document.getElementById('ans8').innerHTML = "Please enter a valid email";
