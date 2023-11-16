@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -182,7 +182,7 @@
         <div class="ans1" id="ans5" class="message">Debt status:NIL</div>
         <div class="ans1" id="ans6">Debt quality:NIL</div>
         <div class="ans1" id="ans7">ERROR MESSAGE :NO ERRORS</div>
-        <div class="ans1" id="ans8">email status</div>
+        <div class="ans1" id="ans8"></div>
         
         
         <div id="error-message" style="color: red;"></div>
@@ -238,7 +238,7 @@
         // investments 
         const result = saving + otherasset + fd ;
         const risk = prisky;
-       
+        
         // Display the result
 if(Age<=30 && Age>0){
        if(healthinsurance<500000 && termins <5000000 && healthinsurance>=0 && termins>=0){
@@ -270,7 +270,7 @@ if(Age<=30 && Age>0){
     
     } else {
     if (totalloan<=saving*0.5 &&totalloan>=0 &&saving>=0 ){
-        ans5.innerHTML = "Debt status:You are within the loan limits, but consider managing your debt wisely.";
+        ans5.innerHTML = "Debt status:Debt status:You are within the loan limits, but consider managing your debt wisely.";
     document.getElementById('ans5').style.color = "green";
     }
     
@@ -282,7 +282,7 @@ if(Age<=30 && Age>0){
                 ans2.innerHTML= "Expenditure status:Stable";
                 document.getElementById('ans2').style.color = "green";
              }
-             if(emi>=12 &&emi>=0){
+             if(emi>12 &&emi>=0){
                 ans6.innerHTML= "Debt quality:Please payy of your loan its a bad one";
                 document.getElementById('ans6').style.color = "red";
              }
@@ -310,10 +310,6 @@ if(Age<=30 && Age>0){
                 }
                 
             }
-           else if(prisky<0){
-               ans3.innerHTML = "please enter a valid value.";
-                document.getElementById('ans3').style.color = "red";
-           }
 
 
         }
@@ -451,8 +447,7 @@ if(Age<=30 && Age>0){
             ans7.innerHTML = "ERROR MESSAGE:: Please enter a correct age ";
             document.getElementById('ans7').style.color = "red";
         }
-       
-   if(isNaN(totalincome)){
+        if(isNaN(totalincome)){
             ans1.innerHTML="Please enter a correct income"
         }
         const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
@@ -463,7 +458,6 @@ if(Age<=30 && Age>0){
         // Validate the email
         if (emailRegex.test(emailInput)) {
             // It's a valid email address
-             document.getElementById('ans8').innerHTML = "Mail - id valid";
         } else {
             // It's not a valid email address
             document.getElementById('ans8').innerHTML = "Please enter a valid email";
@@ -481,4 +475,3 @@ if(Age<=30 && Age>0){
 
 </body>
 </html>
-
