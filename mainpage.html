@@ -270,7 +270,7 @@ if(Age<=30 && Age>0){
     
     } else {
     if (totalloan<=saving*0.5 &&totalloan>=0 &&saving>=0 ){
-        ans5.innerHTML = "Debt status:Debt status:You are within the loan limits, but consider managing your debt wisely.";
+        ans5.innerHTML = "Debt status:You are within the loan limits, but consider managing your debt wisely.";
     document.getElementById('ans5').style.color = "green";
     }
     
@@ -282,7 +282,7 @@ if(Age<=30 && Age>0){
                 ans2.innerHTML= "Expenditure status:Stable";
                 document.getElementById('ans2').style.color = "green";
              }
-             if(emi>12 &&emi>=0){
+             if(emi>=12 &&emi>=0){
                 ans6.innerHTML= "Debt quality:Please payy of your loan its a bad one";
                 document.getElementById('ans6').style.color = "red";
              }
@@ -310,6 +310,10 @@ if(Age<=30 && Age>0){
                 }
                 
             }
+           else if(prisky<0){
+               ans3.innerHTML = "please enter a valid value.";
+                document.getElementById('ans3').style.color = "red";
+           }
 
 
         }
