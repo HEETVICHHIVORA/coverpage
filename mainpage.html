@@ -238,7 +238,10 @@
         // investments 
         const result = saving + otherasset + fd ;
         const risk = prisky;
-        
+           if(Age<0){
+            ans7.innerHTML = "ERROR MESSAGE:: Please enter a correct age ";
+            document.getElementById('ans7').style.color = "red";
+        }
         // Display the result
 if(Age<=30 && Age>0){
        if(healthinsurance<500000 && termins <5000000 && healthinsurance>=0 && termins>=0){
@@ -444,10 +447,7 @@ if(Age<=30 && Age>0){
             }
 
         }
-        else if(Age<0){
-            ans7.innerHTML = "ERROR MESSAGE:: Please enter a correct age ";
-            document.getElementById('ans7').style.color = "red";
-        }
+      
         if(isNaN(totalincome)){
             ans1.innerHTML="Please enter a correct income"
         }
